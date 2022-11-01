@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        button{
+            height: 40px;
+            width: 40px;
+            margin: 10px 10px;
+        }
+        input{
+            height: 35px;
+            width: 170px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="text-align:center">
+        <h2 >Calculator</h2>
+        <input type="text" id="screen">
+        <button onclick="calculate('=')">=</button><br/>
+        <button onclick="display('+')">+</button>
+        <button onclick="display('-')">-</button>
+        <button onclick="display('*')">*</button>
+        <button onclick="display('/')">/</button><br/>
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button onclick="display('4')">4</button><br/>
+        <button onclick="display('5')">5</button>
+        <button onclick="display('6')">6</button>
+        <button onclick="display('7')">7</button>
+        <button onclick="display('8')">8</button><br/>
+        <button onclick="display('9')">9</button>
+        <button onclick="display('0')">0</button>
+        <button onclick="display('.')">.</button>
+        <button onclick="clearScreen()">C</button>
+    </div>
+    <script>
+        let inputBox = document.getElementById("screen");
+        function display(input){
+            inputBox.value += input;
+        }
+        function clearScreen(){
+            inputBox.value = "";
+        }
+        function calculate(){
+            inputBox.value = eval(inputBox.value);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Atleast Two
+You have an array of size n. You need to find all such elements of the given array, who have atleast 2 unique elements greater than it in the same array. Print all such unique elements as space seperated values (in non-decreasing order). If there are no such values, print -1.
+
+Input
+One integer, denoting n the size of the given array. Next line containing n space seperated values, denoting the elements of the array.
+
+Output
+Print all the values that satisfy the given conditions as space space seperated values (in non-decreasing order). If there are no such values, print -1.
+
+Example
+Input1:
+
+6
+3 2 2 5 4 5
+Output1:
+
+2 3
